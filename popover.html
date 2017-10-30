@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"rel="stylesheet" >
+</head>
+
+<body>
+<div class="jumbotron">
+<div class="container">
+<button data-toggle="popover" id="outro-popover"  data-content="Olá seja bem vindo" title="Mensgem <h2> BoraVencer"</h2>OK</button>
+<button id="custom-popover">chamar</button>
+</div>
+</div>
+ <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script>$('[data-toggle="popover"]').popover({placement:"bottom",html:true, delay:1000});
+$('#custom-popover').on('click',function(){
+	$('#outro-popover').popover("show");
+})
+</script>
+</body>
+</html>

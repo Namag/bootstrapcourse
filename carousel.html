@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"rel="stylesheet" >
+</head>
+
+<body>
+<div class="container">
+<button id="pause">Pausar</button>
+<button id="anterior">Anterior</button>
+<button id="proximo">Proximo</button>
+<input type="text" id="number" value="0"> 
+<button id="start">Iniciar</button>
+
+<div id="carousel" class="carousel slide" data-ride="carousel">
+<ol class="carousel-indicators">
+<li data-target="#carousel" data-slide-to="0" class="active"></li>
+<li data-target="#carousel" data-slide-to="1" ></li>
+<li data-target="#carousel" data-slide-to="2" ></li>
+<!--<li data-target="#carousel" data-slide-to="3" ></li>
+<li data-target="#carousel" data-slide-to="4" ></li> -->
+</ol>
+<div class="carousel-inner" role="listbox">
+<div class="item active">
+<img src="imagens/Foto100.jpg" alt="">
+<div class="carousel-caption">
+primeiro slide
+</div>
+</div>
+
+<div class="item ">
+<img src="imagens/Foto101.jpg" alt="">
+<div class="carousel-caption">
+segundo slide slide
+</div>
+</div>
+
+<div class="item ">
+<img src="imagens/Foto102.jpg" alt="">
+<div class="carousel-caption">
+terceiro slide
+</div>
+</div>
+</div>
+<a href="#carousel" class="left carousel-control" data-slide="prev">
+<i class="glyphicon glyphicon-chevron-left"></i>
+</a>
+<a href="#carousel" class="right carousel-control" data-slide="next">
+<i class="glyphicon glyphicon-chevron-right"></i>
+</a>
+</div>
+</div>
+<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script>
+$('#carousel').carousel({
+	interval:5000, keyboard:false})</script>
+    <script>
+	 var btn_pause =$('#pause');
+	 var btn_prev=$('#anterior');
+	 var btn_next =$('#proximo');
+	 var btn_start =$('#start');
+	 var input_number =$('#number');
+	 var $carousel =$('#carousel');
+	 
+	 btn_pause.on('click', function(){
+		 $carousel.carousel('pause');
+	 });
+	btn_prev.on('click', function(){
+		 $carousel.carousel('prev');
+	 });
+	btn_next.on('click', function(){
+		 $carousel.carousel('next');
+	 });
+	btn_start.on('click', function(){
+		 $carousel.carousel(parseInt(input_number.val()));
+	 });
+	</script>
+</body>
+</html>
